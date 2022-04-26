@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\dbpInterfacesExample.ClassLibrary\dbpInterfacesExample.ClassLibrary.csproj">
+      <Project>{d01f58b8-17ec-4622-afa9-7693418e6216}</Project>
+      <Name>dbpInterfacesExample.ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
