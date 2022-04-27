@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace dbpInterfacesExample.ClassLibrary
 {
-    public class Class1
+    public interface IPrintable
     {
+        string Print();
     }
 }

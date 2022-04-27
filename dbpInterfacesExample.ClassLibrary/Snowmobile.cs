@@ -6,22 +6,32 @@ using System.Threading.Tasks;
 
 namespace dbpInterfacesExample.ClassLibrary
 {
-    public class Bicycle : IVehicle, IPrintable
+    public abstract class Snowmobile : IVehicle
     {
         public string Make { get; set; }
         public string Model { get; set; }
-
         public int Speed { get; set; }
 
         public string SpeedUp()
         {
-            return "Bicycle is flying! E.T. is having so much fun.";
+            return "Caught air on that last bump.";
         }
+    }
 
+    public class Skidoo : Snowmobile
+    {
+
+    }
+
+    public class ArcticCat : Snowmobile, IPrintable
+    {
+        public ArcticCat()
+        {
+            base.Make = "Arctic Cat";   
+        }
         public string Print()
         {
-            return $"Bicycle of {Make} {Model} going {Speed} kph";
+            return $"{base.Make} is of Model: {base.Model}";
         }
-
     }
 }

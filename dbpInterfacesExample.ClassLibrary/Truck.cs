@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dbpInterfacesExample.ClassLibrary
 {
-    public class Truck : IVehicle
+    public class Truck : IVehicle, IPrintable
     {
         public string Make { get; set; }
         public string Model { get; set; }
@@ -15,6 +15,11 @@ namespace dbpInterfacesExample.ClassLibrary
         public string SpeedUp()
         {
             return "Truck is moving now.";
+        }
+
+        public string Print()
+        {
+            return ($"Truck of {Make} {Model}");
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dbpInterfacesExample.ClassLibrary
 {
-    public class Car : IVehicle
+    public class Car : IVehicle, IPrintable
     {
         public string Make { get; set; }
         public string Model { get; set; }
@@ -26,6 +26,9 @@ namespace dbpInterfacesExample.ClassLibrary
             return;
         }
 
-
+        public string Print()
+        {
+            return $"Car of type: {Make} {Model} with {FuelLevel} remaining.";
+        }
     }
 }
